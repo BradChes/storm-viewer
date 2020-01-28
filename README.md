@@ -1,6 +1,6 @@
 # Storm Viewer
 <p align="center">
-  <img src="demo/appicon.png " alt="Storm Viewer application icon"
+  <img src="demo/app-icon.png " alt="Storm Viewer application icon"
 	  title="Storm Viewer application icon" align="center" width="200" height="200" />
 </p>
 </br>
