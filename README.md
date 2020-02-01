@@ -4,7 +4,7 @@
 	  title="Storm Viewer application icon" align="center" width="200" height="200" />
 </p>
 </br>
-A simple application that lets users scroll through a list of images, then select one to view.
+A simple application that lets users scroll through a list of images, then select one to view. A selected image can then be shared via `UIActivityViewController`.
 
 ## Examples within this code
 - Table Views
@@ -17,6 +17,8 @@ A simple application that lets users scroll through a list of images, then selec
 - Outlets
 - AutoLayout
 - UIImage
+- UIBarButtonItem
+- UIActivityViewController
 
 
 ## Demonstration
