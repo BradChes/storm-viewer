@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     var pictures = [String]()
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,13 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
         cell.textLabel?.text = pictures[indexPath.row]
+        
+        let views = defaults.integer(forKey: pictures[indexPath.row])
+        if views == 1 {
+            cell.detailTextLabel?.text = "\(views) view"
+        } else {
+            cell.detailTextLabel?.text = "\(views) views"
+        }
         return cell
     }
     
@@ -64,5 +72,9 @@ class ViewController: UITableViewController {
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         
         present(vc, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        tableView.reloadData()
     }
 }
