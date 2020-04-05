@@ -29,9 +29,11 @@ class DetailViewController: UIViewController {
         
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)
-                   totalViews = defaults.integer(forKey: imageToLoad)
-                   totalViews += 1
-                   defaults.set(totalViews, forKey: imageToLoad)
+            totalViews = defaults.integer(forKey: imageToLoad)
+            totalViews += 1
+            defaults.set(totalViews, forKey: imageToLoad)
+        } else {
+            assertionFailure("No image to load.")
         }
     }
     
